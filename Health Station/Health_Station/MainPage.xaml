@@ -3,9 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:Health_Station"
              x:Class="Health_Station.MainPage">
+    <StackLayout
+        VerticalOptions="Center" 
+        HorizontalOptions="Center">
 
-	<Label Text="Welcome to Xamarin Forms!" 
-           VerticalOptions="Center" 
-           HorizontalOptions="Center" />
+        <Label Text="Welcome to Health Station!" FontSize="24" Margin="0,0,0,16" />
+        <Label x:Name="txtTotal" Text="Retrieving data" HorizontalTextAlignment="Center" Margin="0,0,0,16" />
+        <Entry x:Name="txtReps" Placeholder="Repetitions"  Margin="0,0,0,16" Keyboard="Numeric"/>
+        <Button x:Name="btnSubmit" Text="End &amp; Submit" Margin="0,0,0,16" Clicked="btnSubmit_Clicked"/>
 
+    </StackLayout>
 </ContentPage>

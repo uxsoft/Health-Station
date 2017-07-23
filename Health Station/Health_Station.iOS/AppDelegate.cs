@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-
+using Health_Station.Extensions;
 using Foundation;
 using UIKit;
+using Health_Station.iOS.Modules;
+using Ninject.Modules;
 
 namespace Health_Station.iOS
 {
@@ -22,6 +24,8 @@ namespace Health_Station.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
+            App.Container.Load<IOSModule>();
+
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
 

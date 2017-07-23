@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Ninject;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,8 @@ namespace Health_Station
 
             MainPage = new Health_Station.MainPage();
         }
+
+        public static StandardKernel Container { get; set; } = new StandardKernel();
 
         protected override void OnStart()
         {
